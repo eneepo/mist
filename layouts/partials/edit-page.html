@@ -1,0 +1,6 @@
+{{- if and .Site.Params.github_doc_repository .File -}}
+<a class="side-link" href="{{ .Site.Params.github_doc_repository }}/edit/master/{{ .Site.Params.github_doc_repository_path }}{{ .File.Path }}" class="edit-page">
+    <i data-feather="edit-3" width="16px"  height="16px" stroke-width="2px"></i>
+    Edit This Page
+</a>
+{{- end -}}

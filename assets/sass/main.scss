@@ -1,0 +1,72 @@
+@import 'variables';
+@import 'tree';
+@import 'pagination';
+@import 'toc';
+
+body {
+    color: $text-color;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+hr {
+    background-color: $border-color;
+    opacity: 1;
+}
+
+#header{
+    box-shadow: 0px 4px 10px #0000000d;
+    z-index: 1;
+}
+
+#header, #content{
+    position: relative;
+}
+
+#right-sidebar > nav{
+    margin: 3rem 0 2rem;
+}
+
+.side-link{
+    cursor: pointer;
+    border-left: 1px solid $border-color;
+    font-size: 14px;
+    display: block;
+    color: #5c6975;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 6px 0;
+    padding-left: 1rem;
+
+    svg{
+        margin-right: 5px;
+    }
+
+    &:active{
+        animation: flash 1s ease-in-out 0s;
+    }
+    &:hover{
+        border-left-color: $primary-color;
+    }
+}
+
+
+
+aside ul {
+    list-style: none;
+    padding-left: 1rem;
+    ul{
+        padding-left: .5rem;
+    }
+}
+
+@keyframes flash {
+    from { 
+        opacity:0; 
+    } 
+    to { 
+        opacity:1; 
+    } 
+}

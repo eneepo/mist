@@ -1,0 +1,58 @@
+#tree{
+    border-right: 1px solid $border-color;
+    padding: 1rem 0 1rem 2rem;
+
+    ul.tree{
+        ul{
+            padding-left: 1rem;
+        }
+        &:first-child {
+            & > li {
+                margin-bottom: 1.5rem;
+                & > .item {
+                    margin: 8px 0;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+            & > li.is-ancestor > .item,
+            & > li.is-active.is-ancestor > .item{
+                line-height: 26px;
+            }
+        }
+        &:first-child > li.is-active.is-ancestor > .item,
+        & > li.is-ancestor:not(.is-active) > .item{
+            border-left: 2px solid $link-color;
+            color: $link-color;
+            margin-left: -2px;
+        }
+        &:not(:first-child) li.is-active{
+            & > .item{
+                position: relative;
+                background-color: #fff;
+                color: $link-color;
+                &:before {
+                    position: absolute;
+                    display: inline-block;
+                    content: '';
+                    top: 15px;
+                    left: 1px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 112px;
+                    background: $link-color;
+                }
+            }
+        }
+    }
+
+    .item {
+        padding: 6px 14px;
+        margin: 2px 0;
+        display: block;
+        color: #5c6975;
+        min-height: 32px;
+        font-size: 14px;
+    }
+
+}

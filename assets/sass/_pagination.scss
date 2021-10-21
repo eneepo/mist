@@ -1,0 +1,46 @@
+nav.pagination{
+    padding: 5rem 0 1rem;
+
+    .card{
+        flex-direction: row;
+        box-shadow: 0px 1px 2px #0000001f;
+        &:hover{
+            border: 1px solid $primary-color;
+            .icon svg{
+                color: $primary-color;
+            }
+        }
+        &.next .card-body{
+            text-align: left;
+        }
+        .icon{
+            display: flex;
+            flex-direction: column;
+            flex: 10%;
+            align-items: center;
+            justify-content: center;
+            svg{
+                color: #8899a8;
+            }
+        }
+        .card-body{
+            flex: 90%;
+            align-items: initial;
+            justify-content: center;
+            small{
+                color: #8899a8;
+                font-size: 12px;
+            }
+            p{
+                color: #3b454e;
+                font-weight: 500;
+                font-size: 14px;
+            }
+            &:hover{
+                p{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
