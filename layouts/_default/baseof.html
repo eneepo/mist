@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
+{{- partial "head.html" . -}}
+
+<body>
+    {{- partial "header.html" . -}}
+
+    <div class="container-fluid" id="content">
+        <div class="row justify-content-center">
+            <aside class="col-lg-3 col-md-4 d-none d-md-block" id="tree">
+                {{ partial "tree.html" . }}
+            </aside>
+            <section class="col-lg-6 col-md-8">
+                <div class="p-5">
+                    <main>
+                        {{- block "main" . }}{{- end }}
+                    </main>
+                    <footer>
+                        {{- partial "pagination.html" . -}}
+                        <hr>
+                        {{- partial "last-updated.html" . -}}
+                    </footer>
+                </div>
+            </section>
+            <aside class="col-lg-3 d-none d-lg-block sticky-top" id="right-sidebar">
+                <nav>
+                    {{- partial "clipboard.html" . -}}
+                    {{- partial "edit-page.html" . -}}
+                </nav>
+                {{- partial "toc.html" . -}}
+            </aside>
         </div>
-        {{- partial "footer.html" . -}}
-    </body>
+    </div>
+    {{- partial "footer.html" . -}}
+    {{- partial "script.html" . -}}
+</body>
+
 </html>
