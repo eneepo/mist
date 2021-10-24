@@ -1,0 +1,32 @@
+<div id="fastSearch">
+</div>
+
+<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" id="search">
+    <label for="">
+        <div class="icon">
+            <i data-feather="search" width="18px"  height="18px" stroke-width="2px"></i>
+        </div>
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search" id="dummy-search-input">
+    </label>
+</form>
+
+<div class="offcanvas offcanvas-end" id="offcanvas-search" aria-labelledby="offcanvasEndLabel">
+  <div class="offcanvas-header">
+    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" id="search">
+        <label for="">
+            <div class="icon">
+                <i data-feather="search" width="18px"  height="18px" stroke-width="2px"></i>
+            </div>
+            <input type="search" class="form-control" placeholder="Search..." aria-label="Search" id="search-input" autofocus>        </label>
+    </form>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
+        <div class="list-group list-group-flush border-bottom scrollarea" id="search-results">
+        </div>
+      </div>
+  </div>
+</div>
+
+
